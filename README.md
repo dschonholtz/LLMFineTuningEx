@@ -15,6 +15,10 @@ In this repo, the plan is to show simple finetuning pipelines in a jupyter noteb
 1. Find a dataset that would be good to do finetuning on.
     - Show the sizes of the dataset and show what the format the input and output should be to retain chat style output from the associated LLM.
     - Make sure this is a dataset that can be easily added to, searched and modified
+    - Dataset list here: https://github.com/Zjh-819/LLMDataHub
+        - Arxiv CS questions: https://huggingface.co/datasets/ArtifactAI/arxiv-beir-cs-ml-generated-queries
+            - This is particularly good, because it would be easy to further query arxiv and do further finetuning as more information came in.
+        - Phi-1 from textbooks are all you need also looks good: https://huggingface.co/datasets/teleprint-me/phi-1
 2. Pick an LLM that is balances my own poverty with getting a model that actually does something useful. This will likely be a llama 3 8B model, but we might pop it up all the way up to 70B or down to a phi 3B model
     - Using [TorchTune](https://github.com/pytorch/torchtune) 
 4.  Spin up infrastructure and do robust system design on this dataset so that we are set up to feed it to an LLM.
