@@ -13,8 +13,8 @@ In this repo, the plan is to show simple finetuning pipelines in a jupyter noteb
 ## The plan
 
 1. Find a dataset that would be good to do finetuning on.
-  1. Show the sizes of the dataset and show what the format the input and output should be to retain chat style output from the associated LLM.
-  2. Make sure this is a dataset that can be easily added to, searched and modified
+- Show the sizes of the dataset and show what the format the input and output should be to retain chat style output from the associated LLM.
+- Make sure this is a dataset that can be easily added to, searched and modified
 2. Pick an LLM that is balances my own poverty with getting a model that actually does something useful. This will likely be a llama 3 8B model, but we might pop it up all the way up to 70B or down to a phi 3B model
 4.  Spin up infrastructure and do robust system design on this dataset so that we are set up to feed it to an LLM.
 5.  Set up the LLM with weights and biases and do finetuning with LoRA
