@@ -19,6 +19,7 @@ In this repo, the plan is to show simple finetuning pipelines in a jupyter noteb
         - Arxiv CS questions: https://huggingface.co/datasets/ArtifactAI/arxiv-beir-cs-ml-generated-queries
             - This is particularly good, because it would be easy to further query arxiv and do further finetuning as more information came in.
         - Phi-1 from textbooks are all you need also looks good: https://huggingface.co/datasets/teleprint-me/phi-1
+        - SQL Query Gen: I really like the idea of building a model that given a schema and question instantly generates a query
 2. Pick an LLM that is balances my own poverty with getting a model that actually does something useful. This will likely be a llama 3 8B model, but we might pop it up all the way up to 70B or down to a phi 3B model
     - Using [TorchTune](https://github.com/pytorch/torchtune) 
 4.  Spin up infrastructure and do robust system design on this dataset so that we are set up to feed it to an LLM.
