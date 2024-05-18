@@ -28,8 +28,12 @@ In this repo, the plan is to show simple finetuning pipelines in a jupyter noteb
     - Serve with [VLLM](https://github.com/vllm-project/vllm)
     - or [TensorRT](https://github.com/NVIDIA/TensorRT-LLM) It seems like the more hardcore and valuable option is TensorRT per this [blog](https://towardsdatascience.com/deploying-llms-into-production-using-tensorrt-llm-ed36e620dac4).
     - It is interesting to me that both TensorRT and VLLM save/push/pull your model to and from huggingface. It seems this is very locked in for VLLM, and if you want to own and not share your weights at all, you can manage them directly with TensorRT but it is more annoying.
+    - [TensorRT Deploy blog][https://developer.nvidia.com/blog/tune-and-deploy-lora-llms-with-nvidia-tensorrt-llm/)
+    - If I do go with TensorRT, it appears it will be significantly more complicated, and it may require deploying with something like Triton for a model inference server? I think VLLM may have this baked in?
 
 Some things I want to learn more about.
 1. Can we do online learning continually in any meaningful way as we change our dataset and/or get more data?
-2. Can we just generate synthetic data to do this? Make a sql query dataset from GPT-4o for instance
-3. Do we need to or want to quantize the models? What are the real trade offs here?
+    - I think we can do this with multiple LoRA models and hot swap them out as we retrain
+3. Can we just generate synthetic data to do this? Make a sql query dataset from GPT-4o for instance
+4. Do we need to or want to quantize the models? What are the real trade offs here?
+   - TensorRT appears to let us do this at compile time which may be really nice
