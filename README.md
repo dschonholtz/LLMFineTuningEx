@@ -25,7 +25,8 @@ In this repo, the plan is to show simple finetuning pipelines in a jupyter noteb
 4.  Spin up infrastructure and do robust system design on this dataset so that we are set up to feed it to an LLM.
 5.  Set up the LLM with weights and biases and do finetuning with LoRA
 6.  Scale the model so we can hit it with as many requests as needed
-    - Serve with [VLLM](https://github.com/vllm-project/vllm) or [TensorRT](https://github.com/NVIDIA/TensorRT-LLM)
+    - Serve with [VLLM](https://github.com/vllm-project/vllm)
+    - or [TensorRT](https://github.com/NVIDIA/TensorRT-LLM) It seems like the more hardcore and valuable option is TensorRT per this [blog](https://towardsdatascience.com/deploying-llms-into-production-using-tensorrt-llm-ed36e620dac4).
 
 Some things I want to learn more about.
 1. Can we do online learning continually in any meaningful way as we change our dataset and/or get more data?
