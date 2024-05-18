@@ -28,7 +28,7 @@ In this repo, the plan is to show simple finetuning pipelines in a jupyter noteb
     - Serve with [VLLM](https://github.com/vllm-project/vllm)
     - or [TensorRT](https://github.com/NVIDIA/TensorRT-LLM) It seems like the more hardcore and valuable option is TensorRT per this [blog](https://towardsdatascience.com/deploying-llms-into-production-using-tensorrt-llm-ed36e620dac4).
     - It is interesting to me that both TensorRT and VLLM save/push/pull your model to and from huggingface. It seems this is very locked in for VLLM, and if you want to own and not share your weights at all, you can manage them directly with TensorRT but it is more annoying.
-    - [TensorRT Deploy blog][https://developer.nvidia.com/blog/tune-and-deploy-lora-llms-with-nvidia-tensorrt-llm/)
+    - [TensorRT Deploy blog](https://developer.nvidia.com/blog/tune-and-deploy-lora-llms-with-nvidia-tensorrt-llm/)
     - If I do go with TensorRT, it appears it will be significantly more complicated, and it may require deploying with something like Triton for a model inference server? I think VLLM may have this baked in?
 
 Some things I want to learn more about.
