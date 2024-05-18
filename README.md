@@ -27,6 +27,7 @@ In this repo, the plan is to show simple finetuning pipelines in a jupyter noteb
 6.  Scale the model so we can hit it with as many requests as needed
     - Serve with [VLLM](https://github.com/vllm-project/vllm)
     - or [TensorRT](https://github.com/NVIDIA/TensorRT-LLM) It seems like the more hardcore and valuable option is TensorRT per this [blog](https://towardsdatascience.com/deploying-llms-into-production-using-tensorrt-llm-ed36e620dac4).
+    - It is interesting to me that both TensorRT and VLLM save/push/pull your model to and from huggingface. It seems this is very locked in for VLLM, and if you want to own and not share your weights at all, you can manage them directly with TensorRT but it is more annoying.
 
 Some things I want to learn more about.
 1. Can we do online learning continually in any meaningful way as we change our dataset and/or get more data?
